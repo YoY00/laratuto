@@ -1,43 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('body')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <h1>The Welcome page</h1>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-      @foreach($people as $person)
-          <li>{{ $person }}</li>
-      @endforeach;
-    </body>
-</html>
+    @foreach($people as $person)
+        <li>{{ $person }}</li>
+    @endforeach
+@stop
