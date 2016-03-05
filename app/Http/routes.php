@@ -28,6 +28,13 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
+
+Route::get('cards', 'CardsController@index');
+
+//10 minute du https://laracasts.com/series/laravel-5-from-scratch/episodes/7
+//tinker creation de la base insertion de quelques cards.
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
