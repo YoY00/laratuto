@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-RewriteBase /laratuto/public/
+
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
@@ -19,3 +19,4 @@ RewriteBase /laratuto/public/
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+RewriteBase /laratuto/www/

@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/laratuto/public/'),
+    'url' => env('APP_URL', 'http://192.168.1.7/laratuto/www/'),
 
     /*
     |--------------------------------------------------------------------------
