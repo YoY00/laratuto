@@ -15,6 +15,6 @@ class Cards extends Model
 
 	public function path()
 	{
-		return '/cards/'.$this->id;
+		return url('cards/'.$this->id);
 	}
 }
