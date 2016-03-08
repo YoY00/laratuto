@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notes;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -37,4 +38,6 @@ class CardsController extends Controller
 		return view("cards/show", compact('card'));
 
 	}
+
+
 }

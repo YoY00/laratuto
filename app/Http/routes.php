@@ -33,6 +33,10 @@ Route::get('cards', 'CardsController@index');
 Route::get('cards/{card}', 'CardsController@show');
 
 
+Route::post('cards/{card}/notes', 'NotesController@store');
+Route::post('notes/post', 'NotesController@store2');
+
+
 //https://laracasts.com/series/laravel-5-from-scratch/episodes/9?autoplay=true
 
 
