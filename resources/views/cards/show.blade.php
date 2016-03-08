@@ -32,7 +32,7 @@
             <form action="<?php echo url('/notes/post'); ?>" method="post">
                 <div class="form-group">
                     <textarea class="form-control" name="body" id=""></textarea>
-                    <input type="hidden" name="cards_id" value="{{$card->id}}">
+                    <input type="hidden" name="card_id" value="{{$card->id}}">
                 </div>
                 <div class="form-group">
                     <button type="text" class="btn btn-primary">Valider</button>
@@ -41,10 +41,6 @@
         </div>
     </div>
 
-<?php
-    $note = \App\Notes::findorfail(9);
 
-        var_dump( $note->card->id);
-    ?>
 
 @stop

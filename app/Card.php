@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cards extends Model
+class Card extends Model
 {
     //
 	public function notes()
 	{
-		return $this->hasMany(Notes::class);
+		return $this->hasMany(Note::class);
 	}
 
 
@@ -19,7 +19,7 @@ class Cards extends Model
 	}
 
 
-	public function addNote(Notes $note)
+	public function addNote(Note $note)
 	{
 		return $this->notes()->save($note);
 

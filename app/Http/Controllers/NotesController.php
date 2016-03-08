@@ -2,33 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Cards;
+use App\Card;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Notes;
+use App\Note;
 class NotesController extends Controller
 {
     //
-	public function store(Request $request, Cards $card)
+	public function store(Request $request, Card $card)
 	{
-//		$note = new Notes();
+//		$note = new Note();
 //		$note->body = $request->body;
-//		$note->cards_id = $card->id;
+//		$note->card_id = $card->id;
 //		return $note;
 
 
-//		$note = new Notes();
+//		$note = new Note();
 //		$note->body = $request->body;
 //		$card->notes()->save($note);
 
 
-//		$note = new Notes(['body' => $request->body]);
+//		$note = new Note(['body' => $request->body]);
 //		$card->notes()->save($note);
 
 
 //		$card->notes()->save(
-//			new Notes(['body' => $request->body])
+//			new Note(['body' => $request->body])
 //		);
 
 
@@ -42,7 +42,7 @@ class NotesController extends Controller
 
 
 		$card->addNote(
-			new Notes($request->all())
+			new Note($request->all())
 		);
 
 
@@ -53,7 +53,7 @@ class NotesController extends Controller
 
 	public function store2(Request $request)
 	{
-		$note = new Notes($request->all());
+		$note = new Note($request->all());
 		$note->save();
 
 		return back();

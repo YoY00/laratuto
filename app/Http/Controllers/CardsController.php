@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Notes;
+use App\Note;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use DB;
-use App\Cards;
+use App\Card;
 
 class CardsController extends Controller
 {
@@ -15,14 +15,14 @@ class CardsController extends Controller
 
 //	public function index()
 //	{
-//		$cards = DB::table('cards')->get();
+//		$cards = DB::table('card')->get();
 //		return view('cards/index', compact('cards'));
 //	}
 
 
 	public function index()
 	{
-		$cards = Cards::all();
+		$cards = Card::all();
 		return view('cards/index', compact('cards'));
 	}
 
@@ -33,7 +33,7 @@ class CardsController extends Controller
 //
 //	}
 
-	public function show(Cards $card)
+	public function show(Card $card)
 	{
 		return view("cards/show", compact('card'));
 
