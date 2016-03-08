@@ -14,4 +14,14 @@ class Note extends Model
 	{
 		return $this->belongsTo(Card::class);
 	}
+
+	public function editPath()
+	{
+		return url('notes/'.$this->id.'/edit');
+	}
+
+	public function updatePath()
+	{
+		return url('notes/'.$this->id);
+	}
 }

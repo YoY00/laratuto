@@ -37,7 +37,10 @@ Route::post('cards/{card}/notes', 'NotesController@store');
 Route::post('notes/post', 'NotesController@store2');
 
 
-//https://laracasts.com/series/laravel-5-from-scratch/episodes/9?autoplay=true
+//update a note
+Route::get('notes/{note}/edit', 'NotesController@edit');
+Route::patch('notes/{note}', 'NotesController@update');
+//https://laracasts.com/series/laravel-5-from-scratch/episodes/10?autoplay=true
 
 
 

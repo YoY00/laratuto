@@ -9,14 +9,14 @@
             <ul class="list-group">
                 @foreach($card->notes as $note)
 
-                    <li class="list-group-item">{{$note->body}}</li>
+                    <li class="list-group-item"><a href="{{$note->editPath()}}">{{$note->body}}</a></li>
                 @endforeach
             </ul>
             
             
             <h3>Add a note</h3>
 
-            <form action="<?php echo url('/cards/'.$card->id.'/notes'); ?>" method="post">
+            <form action="{{url('/cards/'.$card->id.'/notes')}}" method="post">
                 <div class="form-group">
                     <textarea class="form-control" name="body" id=""></textarea>
                 </div>
