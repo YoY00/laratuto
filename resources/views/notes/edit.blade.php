@@ -7,6 +7,7 @@
             <h1>Edit the note</h1>
             <form action="{{$note->updatePath()}}" method="post">
                 {{method_field('PATCH')}}
+                {{csrf_field()}}
 
                 <div class="form-group">
                     <textarea class="form-control" name="body" id="">{{$note->body}}</textarea>

@@ -25,25 +25,6 @@
 //});
 
 
-
-Route::get('/', 'PageController@home');
-Route::get('about', 'PagesController@about');
-
-Route::get('cards', 'CardsController@index');
-Route::get('cards/{card}', 'CardsController@show');
-
-
-Route::post('cards/{card}/notes', 'NotesController@store');
-Route::post('notes/post', 'NotesController@store2');
-
-
-//update a note
-Route::get('notes/{note}/edit', 'NotesController@edit');
-Route::patch('notes/{note}', 'NotesController@update');
-//https://laracasts.com/series/laravel-5-from-scratch/episodes/10?autoplay=true
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -55,6 +36,24 @@ Route::patch('notes/{note}', 'NotesController@update');
 |
 */
 
-//Route::group(['middleware' => ['web']], function () {
-//    //
-//});
+Route::group(['middleware' => ['web']], function ()
+{
+
+	Route::get('/', 'PagesController@home');
+	Route::get('about', 'PagesController@about');
+
+	Route::get('cards', 'CardsController@index');
+	Route::get('cards/{card}', 'CardsController@show');
+
+
+	Route::post('cards/{card}/notes', 'NotesController@store');
+	Route::post('notes/post', 'NotesController@store2');
+
+
+	//update a note
+	Route::get('notes/{note}/edit', 'NotesController@edit');
+	Route::patch('notes/{note}', 'NotesController@update');
+//	https://laracasts.com/series/laravel-5-from-scratch/episodes/13
+
+
+});

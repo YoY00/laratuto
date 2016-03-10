@@ -40,20 +40,22 @@ class NotesController extends Controller
 //		$card->notes()->create($request->all());
 
 
-
-		$card->addNote(
-			new Note($request->all())
-		);
-
-
-
+		$note = new Note($request->all());
+		$card->addNote($note, 1);
 		return back();
 	}
 
 
 	public function store2(Request $request)
 	{
+
+		$this->validate($request, [
+			'body' => 'required|min:10'
+		]);
+
 		$note = new Note($request->all());
+		$note->user_id= 1;
+
 		$note->save();
 
 		return back();

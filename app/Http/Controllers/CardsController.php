@@ -35,6 +35,20 @@ class CardsController extends Controller
 
 	public function show(Card $card)
 	{
+//		return $card->notes[0]->user;
+		//$card = Card::with('notes')->get(); // return array
+		//$card = Card::with('notes')->find(1); // return one
+//		return $card->notes[0]->user; // n+ 1
+
+
+//		$card = Card::with('notes.user')->find(1); // return one
+//		return $card;
+
+
+
+		$card->load('notes.user'); // return one
+//		return $card;
+
 		return view("cards/show", compact('card'));
 
 	}
